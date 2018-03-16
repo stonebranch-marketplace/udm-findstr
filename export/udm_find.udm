@@ -1,0 +1,15 @@
+#
+echo 	###
+echo	"### find a string in a given string or variable" 
+echo 	###
+#  
+set var1=universal_data_mover
+#
+find "$(var1)" seq=data                            
+echo "result of find data was: $(_lastrc.message)"   
+find "$(var1)" seq=data                            
+echo "position of data is $(_lastrc.result)"         
+find "$(var1)" seq=datx                            
+echo "result of find datx was: $(_lastrc.message)"   
+find "$(var1)" seq=datx                            
+echo "position of datx is $(_lastrc.result)"         
